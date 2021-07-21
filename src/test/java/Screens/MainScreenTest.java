@@ -18,6 +18,11 @@ public class MainScreenTest extends BaseTest{
 		}
 		
 		@Test
+		public void validandoBotaoOK()  {
+			Assert.assertEquals(mains.clicavelOK(), true); 
+		}
+		
+		@Test
 		public void validandoMenuTopicos()  {
 			mains.clicarMenu();
 			
@@ -27,7 +32,7 @@ public class MainScreenTest extends BaseTest{
 			Assert.assertEquals(mains.botaoFACAPARTE().getText(), "FAÇA PARTE"); 
 			Assert.assertEquals(mains.botaoPROJETOS().getText(), "PROJETOS"); 
 			Assert.assertEquals(mains.botaoCONTATO().getText(), "CONTATO"); 
-			Assert.assertEquals(mains.botaoDOAR().getText(), "DOAR"); 
+			Assert.assertEquals(mains.botaoDOAR().getText(), "DOAR AGORA"); 
 		}
 		
 		@Test
@@ -35,8 +40,8 @@ public class MainScreenTest extends BaseTest{
 			mains.clicarMenu();
 			mains.clicarOpcaoMenu("SOBRE NÓS");
 			
-			Assert.assertEquals(mains.botaoQUEMSOMOS(), "QUEM SOMOS");
-			Assert.assertEquals(mains.botaoTRANSPARENCIA(), "TRANSPARÊNCIA");
+			Assert.assertEquals(mains.botaoQUEMSOMOS().getText(), "QUEM SOMOS");
+			Assert.assertEquals(mains.botaoTRANSPARENCIA().getText(), "TRANSPARÊNCIA");
 		}
 		
 		@Test
@@ -64,6 +69,7 @@ public class MainScreenTest extends BaseTest{
 		
 		@Test
 		public void validandoMenuSubTopicosProjetos()  {
+			mains.clicarOK();
 			mains.clicarMenu();
 			mains.clicarOpcaoMenu("PROJETOS");
 			
@@ -73,7 +79,7 @@ public class MainScreenTest extends BaseTest{
 			Assert.assertEquals(mains.botaoDESPOLARIZE().getText(), "DESPOLARIZE");
 			Assert.assertEquals(mains.botaoDIALOGA().getText(), "DIALOGA!");
 			Assert.assertEquals(mains.botaoEQUIDADE().getText(), "EQUIDADE");
-			Assert.assertEquals(mains.botaoHACKATON().getText(), "HACKATON CÍVICO");
+			Assert.assertEquals(mains.botaoHACKATHON().getText(), "HACKATHON CÍVICO");
 			Assert.assertEquals(mains.botaoNAOMECANC().getText(), "NÃO ME CANCELA");
 		}
 }

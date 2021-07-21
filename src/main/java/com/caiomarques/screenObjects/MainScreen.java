@@ -40,10 +40,10 @@ public class MainScreen extends BaseScreen{
 		By btnDESPOLARIZE = 	By.xpath("//android.view.View[@text='DESPOLARIZE']");
 		By btnDIALOGA = 		By.xpath("//android.view.View[@text='DIALOGA!']");
 		By btnEQUIDADE = 		By.xpath("//android.view.View[@text='EQUIDADE']");
-		By btnHACKATON = 		By.xpath("//android.view.View[@text='HACKATON CÍVICO']");
+		By btnHACKATHON = 		By.xpath("//android.view.View[@text='HACKATHON CÍVICO']");
 		By btnNAOMECANC = 		By.xpath("//android.view.View[@text='NÃO ME CANCELA']");
 			
-		By labelPorcent =	By.xpath("//android.view.View[@resource-id='fl-post-25']");
+		By btnOK =	By.xpath("//android.widget.Button[@text='OK']");
 	    
 		By btnExtVLibras = 	By.xpath("//android.widget.Image[@text='Conteúdo acessível em libras usando o VLibras Widget com opções dos Avatares Ícaro ou Hozana.']");
 		By btnExtAcess = 	By.xpath("//android.view.View[@resource-id='real-accessability-btn']");
@@ -148,8 +148,8 @@ public class MainScreen extends BaseScreen{
 		    return getDriver().findElement(btnEQUIDADE);
 		}
 		
-		public MobileElement botaoHACKATON(){
-		    return getDriver().findElement(btnHACKATON);
+		public MobileElement botaoHACKATHON(){
+		    return getDriver().findElement(btnHACKATHON);
 		}
 		
 		public MobileElement botaoNAOMECANC(){
@@ -165,8 +165,17 @@ public class MainScreen extends BaseScreen{
 		}
 		
 		public boolean clicavelMenu() {
-			return obterStatusAtr(btnMenu, "clicável");
+			return obterStatusAtr(btnMenu, "clickable");
 		}
+		
+		public void clicarOK() {
+			clicar(btnOK);
+		}
+		
+		public boolean clicavelOK() {
+			return obterStatusAtr(btnOK, "clickable");
+		}
+		
 		
 		public void clicarOpcaoMenu(String topico) {
 			
@@ -263,19 +272,19 @@ public class MainScreen extends BaseScreen{
 					clicar(btnFACAPARTE);
 					switch (subTopico) {				
 						case "DOE!":
-							clicar(btnTRANSPARENCIA);
+							clicar(btnDOE);
 							break;
 							
 						case "SEJA UM VOLUNTÁRIO":
-							clicar(btnTRANSPARENCIA);
+							clicar(btnVOLUNTARIO);
 							break;
 							
 						case "TRABALHE CONOSCO":
-							clicar(btnTRANSPARENCIA);
+							clicar(btnTRABCONOSCO);
 							break;
 							
 						case "REPUBLIQUE OS CONTEÚDOS":
-							clicar(btnTRANSPARENCIA);
+							clicar(btnREPUBLIQUE);
 							break;
 							
 						default:
@@ -288,33 +297,34 @@ public class MainScreen extends BaseScreen{
 					clicar(btnPROJETOS);
 					switch (subTopico) {				
 						case "ACADEMIA DE INOVAÇÃO CIDADÃ":
-							clicar(btnTRANSPARENCIA);
+							clicar(btnACADEMIAINOVA);
 							break;
 							
 						case "ARTIGO QUINTO":
-							clicar(btnTRANSPARENCIA);
+							clicar(btnARTQUINTO);
 							break;
+							
 						case "CANVAS DE POLITICAS PUBLICAS":
-							clicar(btnTRANSPARENCIA);
+							clicar(btnCANVASPOLITIC);
 							break;
 							
 						case "DESPOLARIZE":
-							clicar(btnTRANSPARENCIA);
+							clicar(btnDESPOLARIZE);
 							break;
 						case "DIALOGA!":
-							clicar(btnTRANSPARENCIA);
+							clicar(btnDIALOGA);
 							break;
 							
 						case "EQUIDADE":
-							clicar(btnTRANSPARENCIA);
+							clicar(btnEQUIDADE);
 							break;
 							
-						case "HACKATON CÍVICO":
-							clicar(btnTRANSPARENCIA);
+						case "HACKATHON CÍVICO":
+							clicar(btnHACKATHON);
 							break;
 							
 						case "NÃO ME CANCELA":
-							clicar(btnTRANSPARENCIA);
+							clicar(btnNAOMECANC);
 							break;
 							
 						default:
