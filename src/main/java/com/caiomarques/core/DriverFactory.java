@@ -10,21 +10,19 @@ import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
 
 // Design Patterns: Factory/Singleton
-// Vou centralizar a criação dos motoristas para que todos contenham a mesma instância do Driver
-// Ou seja, em cada ponto que eu precisar do Driver, vou pedir ao DriverFactory, e irei receber a mesma instância(objeto)
+// Vou centralizar a criaÃ§Ã£o dos motoristas para que todos contenham a mesma instÃ¢ncia do Driver
+// Ou seja, em cada ponto que eu precisar do Driver, vou pedir ao DriverFactory, e irei receber a mesma instÃ¢ncia(objeto)
 public class DriverFactory {
 	
 	private static AndroidDriver<MobileElement> driver;
 	
 	public static AndroidDriver<MobileElement> getDriver() {
-		// Caso ainda não tenha sido criado nenhum motorista, poderei criar um novo
 		if(driver == null) {
 			createDriver();
 		}
 		return driver;
 	}
 
-	// Deixo a criação do driver como estático por que não estarei utilizando ele diretamente por este método
 	private static void createDriver(){
 		DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
 	    desiredCapabilities.setCapability("platformName", "Android");
