@@ -1,11 +1,13 @@
 ![Alt Appium_Politize](https://raw.githubusercontent.com/PardoMarques/Appium_Politize/master/img_01.png)
 
 # Framework de testes automatizados <br> JAVA | APPIUM | CUCUMBER | JUNIT
-<br><br><br>
+<br><br>
+## O Appium e o ScreenObjects
 > A literatura que envolve as técnicas de amadurecimento para a qualidade de um software indica que para cada nível da Pirâmide de Testes, é necessário criar um ambiente próprio e com estrutura suficiente para as validações existentes em cada camada.
 
-A literatura que envolve as técnicas de amadurecimento para a qualidade de um software indica que para cada nível da Pirâmide de Testes, é necessário criar um ambiente próprio e com estrutura suficiente para as validações existentes em cada camada. 
-Para testes de interface gráfica (Camada de Sistemas), podemos alavancar a velocidade dos testes regressivos, gerar menos custos e aumentar a maturidade de nosso projeto quando implementamos a estrutura de testes automatizados. 
+> Projetos de automação de testes para Web possuem métricas e técnicas práticas para uma padronização aceitável ao Mercado. Dentre essas técnicas e padrões, temos o Design Pattern PageObjects, que é um padrão de projeto destinado à automação de aplicações Web com interfaces gráficas. O PageObjects, como o próprio nome diz, nos norteia na organização e execução de nossas classes. Cada página de um sistema Web será separada em uma respectiva classe e seus elementos de página serão “totalmente” mapeadas a fim de alimentarem nossos métodos que vão simular todas as funcionalidades que um usuário poderia executar.
+
+> Como uma opção equivalente, temos o ScreenObjects que tem como base, a mesma teoria e prática do PageObjects, porém com os testes voltados as telas do aplicativo. Lembrando que o framework utilizado para a automação do Mobile, o Appium, é uma extensão do framework utilizado em automação Web, o Selenium. As classes que orquestram o projeto são a BaseScreen, BaseTest e DriverFactory.
 
 ## Dependencias utilizadas no Maven	
 
