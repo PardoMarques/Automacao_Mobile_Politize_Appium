@@ -1,5 +1,6 @@
 package com.caiomarques.core;
 
+
 import static com.caiomarques.core.DriverFactory.getDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -18,6 +19,7 @@ public abstract class BaseScreen {
 	protected void esperarImplicitamente() {
 		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
+	
 	
 	protected void clicar(By by) {
 		esperarImplicitamente();
