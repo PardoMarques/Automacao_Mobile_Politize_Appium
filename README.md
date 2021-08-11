@@ -1,10 +1,30 @@
-# Appium_Politize
+![Alt Appium_Politize](https://raw.githubusercontent.com/PardoMarques/Appium_Politize/master/img_01.png)
 
-Framework de testes automatizados JAVA/APPIUM/CUCUMBER/JUNIT
+# Framework de testes automatizados <br> JAVA | APPIUM | CUCUMBER | JUNIT
+<br><br><br>
+> A literatura que envolve as técnicas de amadurecimento para a qualidade de um software indica que para cada nível da Pirâmide de Testes, é necessário criar um ambiente próprio e com estrutura suficiente para as validações existentes em cada camada.
 
-**Dependencias utilizadas no Maven	
+A literatura que envolve as técnicas de amadurecimento para a qualidade de um software indica que para cada nível da Pirâmide de Testes, é necessário criar um ambiente próprio e com estrutura suficiente para as validações existentes em cada camada. 
+Para testes de interface gráfica (Camada de Sistemas), podemos alavancar a velocidade dos testes regressivos, gerar menos custos e aumentar a maturidade de nosso projeto quando implementamos a estrutura de testes automatizados. 
+
+## Dependencias utilizadas no Maven	
 
 ```
+
+<build>
+  	<plugins>
+	  <plugin>
+	  <groupId>org.apache.maven.plugins</groupId>
+	  <artifactId>maven-compiler-plugin</artifactId>
+	  <version>3.8.0</version>
+	  <configuration>
+	  <source>1.8</source>
+	  <target>1.8</target>
+	  </configuration>
+	  </plugin>
+ 	</plugins>
+ </build>
+
 <dependencies>
 
 	<dependency>
@@ -42,3 +62,5 @@ Framework de testes automatizados JAVA/APPIUM/CUCUMBER/JUNIT
 </dependencies>
 
 ```
+
+![Alt Appium_Politize](https://raw.githubusercontent.com/PardoMarques/Appium_Politize/master/ScreenObjectsUML.png)
