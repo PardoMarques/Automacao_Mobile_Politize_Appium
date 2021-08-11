@@ -6,7 +6,7 @@ import org.junit.Assert;
 
 import com.caiomarques.screenObjects.SplashScreen;
 
-public class BaseTest {
+public abstract class BaseTest {
 	
 	private SplashScreen splash = new SplashScreen();
 	
@@ -16,7 +16,7 @@ public class BaseTest {
 		Assert.assertEquals("Politize!", splash.obterTitulo()); 
 	}
 	
-	// Ao finalizar o teste, ser� deletado aquele motorista para que o proximo teste possa iniciar sem cache
+	// Ao finalizar o teste, será deletado aquele motorista para que o proximo teste possa iniciar sem cache
 	@After()
 	public void tearDown() {
 		DriverFactory.killDriver();
