@@ -9,33 +9,33 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import io.appium.java_client.MobileElement;
 
-public class BaseScreen {
+public abstract class BaseScreen {
 	
-	// Uma solução para o Antipattern Constant Interface, é o simples uso do import static
+	// Uma soluÃ§Ã£o para o Antipattern Constant Interface, Ã© o simples uso do import static
 	// import com.caiomarques.core.DriverFactory;
 	// import static com.caiomarques.core.DriverFactory.getDriver;
 	
-	public void esperarImplicitamente() {
+	protected void esperarImplicitamente() {
 		getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	}
 	
-	public void clicar(By by) {
+	protected void clicar(By by) {
 		esperarImplicitamente();
 		ExpectedConditions.elementToBeClickable(by);
 		getDriver().findElement(by).click();
 	}
 	
-	public String retornarTexto(By by) {
+	protected String retornarTexto(By by) {
 		esperarImplicitamente();
 		ExpectedConditions.elementToBeClickable(by);
 		return getDriver().findElement(by).getText();
 	}
 	
-	public MobileElement obterElemPelaClasseETexto(String classe, String texto) {
+	protected MobileElement obterElemPelaClasseETexto(String classe, String texto) {
 		return getDriver().findElement(By.xpath("//" + classe + "[@text='" + texto + "']"));
 	}
 		
-	public boolean obterStatusAtr(By by, String selecionarStatus) {
+	protected boolean obterStatusAtr(By by, String selecionarStatus) {
 		switch (selecionarStatus) {
 			case "checkable":
 				return getDriver().findElement(by).getAttribute("checkable").equals("true");
@@ -68,12 +68,12 @@ public class BaseScreen {
 			    return getDriver().findElement(by).getAttribute("selected").equals("true");
 
 			default:
-				System.out.println("TEXTO INVÁLIDO");
+				System.out.println("TEXTO INVï¿½LIDO");
 			   	return false;
 		}
 	}
 	
-	public boolean obterStatusEspecifico(MobileElement elem, String selecionarStatus) {
+	protected boolean obterStatusAtr(MobileElement elem, String selecionarStatus) {
 		switch (selecionarStatus) {
 			case "checkable":
 				return elem.getAttribute("checkable").equals("true");
@@ -106,7 +106,7 @@ public class BaseScreen {
 			    return elem.getAttribute("selected").equals("true");
 
 			default:
-				System.out.println("TEXTO INVÁLIDO");
+				System.out.println("TEXTO INVï¿½LIDO");
 			   	return false;
 		}
 	}

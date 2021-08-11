@@ -12,40 +12,40 @@ public class MainScreen extends BaseScreen{
 	
 		By btnMenu = 		By.xpath("//android.widget.Button[@text='Menu']");
 		
-		By btnCONTEUDO = 	By.xpath("//android.view.View[@text='CONTE⁄DO']");
-		By btnSOBRE = 		By.xpath("//android.view.View[@text='SOBRE N”S']");
+		By btnCONTEUDO = 	By.xpath("//android.view.View[@text='CONTE√öDO']");
+		By btnSOBRE = 		By.xpath("//android.view.View[@text='SOBRE N√ìS']");
 		By btnOQFAZEMOS = 	By.xpath("//android.view.View[@text='O QUE FAZEMOS']");
-		By btnFACAPARTE =	By.xpath("//android.view.View[@text='FA«A PARTE']");
+		By btnFACAPARTE =	By.xpath("//android.view.View[@text='FA√áA PARTE']");
 		By btnPROJETOS = 	By.xpath("//android.view.View[@text='PROJETOS']");
 		By btnCONTATO = 	By.xpath("//android.view.View[@text='CONTATO']");
 		By btnDOAR = 		By.xpath("//android.view.View[@text='DOAR AGORA']");
 		
 		By btnQUEMSOMOS = 		By.xpath("//android.view.View[@text='QUEM SOMOS']");
-		By btnTRANSPARENCIA = 	By.xpath("//android.view.View[@text='TRANSPAR NCIA']");
+		By btnTRANSPARENCIA = 	By.xpath("//android.view.View[@text='TRANSPAR√äNCIA']");
 		
-		By btnATUACAO = 		By.xpath("//android.view.View[@text='ATUA«√O EM ESCOLAS']");
-		By btnCONTEUDOS = 		By.xpath("//android.view.View[@text='CONTE⁄DOS']");
-		By btnLIDERES = 		By.xpath("//android.view.View[@text='FORMA«√O DE LÕDERES']");
+		By btnATUACAO = 		By.xpath("//android.view.View[@text='ATUA√á√ÉO EM ESCOLAS']");
+		By btnCONTEUDOS = 		By.xpath("//android.view.View[@text='CONTE√öDOS']");
+		By btnLIDERES = 		By.xpath("//android.view.View[@text='FORMA√á√ÉO DE L√çDERES']");
 		By btnCANALYOUTUBE = 	By.xpath("//android.view.View[@text='CANAL NO YOUTUBE']");
-		By btnPRIVACIDADE = 	By.xpath("//android.view.View[@text='POLÕTICA DE PRIVACIDADE']");
+		By btnPRIVACIDADE = 	By.xpath("//android.view.View[@text='POL√çTICA DE PRIVACIDADE']");
 		
 		By btnDOE = 			By.xpath("//android.view.View[@text='DOE!']");
-		By btnVOLUNTARIO = 		By.xpath("//android.view.View[@text='SEJA UM VOLUNT¡RIO']");
+		By btnVOLUNTARIO = 		By.xpath("//android.view.View[@text='SEJA UM VOLUNT√ÅRIO']");
 		By btnTRABCONOSCO = 	By.xpath("//android.view.View[@text='TRABALHE CONOSCO']");
-		By btnREPUBLIQUE = 		By.xpath("//android.view.View[@text='REPUBLIQUE OS CONTE⁄DOS']");
+		By btnREPUBLIQUE = 		By.xpath("//android.view.View[@text='REPUBLIQUE OS CONTE√öDOS']");
 		
-		By btnACADEMIAINOVA = 	By.xpath("//android.view.View[@text='ACADEMIA DE INOVA«√O CIDAD√']");
+		By btnACADEMIAINOVA = 	By.xpath("//android.view.View[@text='ACADEMIA DE INOVA√á√ÉO CIDAD√É']");
 		By btnARTQUINTO = 		By.xpath("//android.view.View[@text='ARTIGO QUINTO']");
 		By btnCANVASPOLITIC = 	By.xpath("//android.view.View[@text='CANVAS DE POLITICAS PUBLICAS']");
 		By btnDESPOLARIZE = 	By.xpath("//android.view.View[@text='DESPOLARIZE']");
 		By btnDIALOGA = 		By.xpath("//android.view.View[@text='DIALOGA!']");
 		By btnEQUIDADE = 		By.xpath("//android.view.View[@text='EQUIDADE']");
-		By btnHACKATHON = 		By.xpath("//android.view.View[@text='HACKATHON CÕVICO']");
-		By btnNAOMECANC = 		By.xpath("//android.view.View[@text='N√O ME CANCELA']");
+		By btnHACKATHON = 		By.xpath("//android.view.View[@text='HACKATHON C√çVICO']");
+		By btnNAOMECANC = 		By.xpath("//android.view.View[@text='N√ÉO ME CANCELA']");
 			
 		By btnOK =	By.xpath("//android.widget.Button[@text='OK']");
 	    
-		By btnExtVLibras = 	By.xpath("//android.widget.Image[@text='Conte˙do acessÌvel em libras usando o VLibras Widget com opÁıes dos Avatares Õcaro ou Hozana.']");
+		By btnExtVLibras = 	By.xpath("//android.widget.Image[@text='Conte√∫do acess√≠vel em libras usando o VLibras Widget com op√ß√µes dos Avatares √çcaro ou Hozana.']");
 		By btnExtAcess = 	By.xpath("//android.view.View[@resource-id='real-accessability-btn']");
 	
 	//EndRegion
@@ -158,7 +158,7 @@ public class MainScreen extends BaseScreen{
 
 	//EndRegion
 		
-	//Region - MÈtodos
+	//Region - M√©todos
 	
 		public void clicarMenu() {
 			clicar(btnMenu);
@@ -180,11 +180,11 @@ public class MainScreen extends BaseScreen{
 		public void clicarOpcaoMenu(String topico) {
 			
 			switch (topico) {
-				case "CONTE⁄DO":
+				case "CONTE√öDO":
 					clicar(btnCONTEUDO);
 					break;
 					
-				case "SOBRE N”S":
+				case "SOBRE N√ìS":
 					clicar(btnSOBRE);
 					break;
 					
@@ -192,7 +192,7 @@ public class MainScreen extends BaseScreen{
 					clicar(btnOQFAZEMOS);
 					break;
 					
-				case "FA«A PARTE":
+				case "FA√áA PARTE":
 					clicar(btnFACAPARTE);
 					break;
 					
@@ -209,7 +209,7 @@ public class MainScreen extends BaseScreen{
 					break;
 	
 				default:
-					System.out.println("T”PICO INV¡LIDO");
+					System.out.println("T√ìPICO INV√ÅLIDO");
 				   	break;
 			}
 		}
@@ -217,19 +217,19 @@ public class MainScreen extends BaseScreen{
 		public void clicarOpcaoMenu(String topico, String subTopico) {
 			
 			switch (topico) {				
-				case "SOBRE N”S":
+				case "SOBRE N√ìS":
 					clicar(btnSOBRE);
 					switch (subTopico) {				
 						case "QUEM SOMOS":
 							clicar(btnQUEMSOMOS);
 							break;
 							
-						case "TRANSPAR NCIA":
+						case "TRANSPAR√äNCIA":
 							clicar(btnTRANSPARENCIA);
 							break;
 							
 						default:
-							System.out.println("OP«√O INV¡LIDA");
+							System.out.println("OP√á√ÉO INV√ÅLIDA");
 						   	break;
 					}
 					break;
@@ -237,15 +237,15 @@ public class MainScreen extends BaseScreen{
 				case "O QUE FAZEMOS":
 					clicar(btnOQFAZEMOS);
 					switch (subTopico) {				
-						case "ATUA«√O EM ESCOLAS":
+						case "ATUA√á√ÉO EM ESCOLAS":
 							clicar(btnATUACAO);
 							break;
 							
-						case "CONTE⁄DOS":
+						case "CONTE√öDOS":
 							clicar(btnCONTEUDOS);
 							break;
 							
-						case "FORMA«√O DE LÕDERES":
+						case "FORMA√á√ÉO DE L√çDERES":
 							clicar(btnLIDERES);
 							break;
 							
@@ -253,29 +253,29 @@ public class MainScreen extends BaseScreen{
 							clicar(btnCANALYOUTUBE);
 							break;
 							
-						case "POLÕTICA DE PRIVACIDADE":
+						case "POL√çTICA DE PRIVACIDADE":
 							clicar(btnPRIVACIDADE);
 							break;
 							
-						case "SOBRE N”S":
+						case "SOBRE N√ìS":
 							clicar(btnSOBRE);
 							break;
 							
 						default:
-							System.out.println("OP«√O INV¡LIDA");
+							System.out.println("OP√á√ÉO INV√ÅLIDA");
 						   	break;
 					}
 							
 					break;
 	
-				case "FA«A PARTE":
+				case "FA√áA PARTE":
 					clicar(btnFACAPARTE);
 					switch (subTopico) {				
 						case "DOE!":
 							clicar(btnDOE);
 							break;
 							
-						case "SEJA UM VOLUNT¡RIO":
+						case "SEJA UM VOLUNT√ÅRIO":
 							clicar(btnVOLUNTARIO);
 							break;
 							
@@ -283,12 +283,12 @@ public class MainScreen extends BaseScreen{
 							clicar(btnTRABCONOSCO);
 							break;
 							
-						case "REPUBLIQUE OS CONTE⁄DOS":
+						case "REPUBLIQUE OS CONTE√öDOS":
 							clicar(btnREPUBLIQUE);
 							break;
 							
 						default:
-							System.out.println("OP«√O INV¡LIDA");
+							System.out.println("OP√á√ÉO INV√ÅLIDA");
 						   	break;
 					}
 					break;
@@ -296,7 +296,7 @@ public class MainScreen extends BaseScreen{
 				case "PROJETOS":
 					clicar(btnPROJETOS);
 					switch (subTopico) {				
-						case "ACADEMIA DE INOVA«√O CIDAD√":
+						case "ACADEMIA DE INOVA√á√ÉO CIDAD√É":
 							clicar(btnACADEMIAINOVA);
 							break;
 							
@@ -319,22 +319,22 @@ public class MainScreen extends BaseScreen{
 							clicar(btnEQUIDADE);
 							break;
 							
-						case "HACKATHON CÕVICO":
+						case "HACKATHON C√çVICO":
 							clicar(btnHACKATHON);
 							break;
 							
-						case "N√O ME CANCELA":
+						case "N√ÉO ME CANCELA":
 							clicar(btnNAOMECANC);
 							break;
 							
 						default:
-							System.out.println("OP«√O INV¡LIDA");
+							System.out.println("OP√á√ÉO INV√ÅLIDA");
 						   	break;
 					}
 					break;
 				
 				default:
-					System.out.println("OP«√O INV¡LIDA");
+					System.out.println("OP√á√ÉO INV√ÅLIDA");
 				   	break;
 			}
 		}

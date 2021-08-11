@@ -1,17 +1,17 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.caiomarques</groupId>
-  <artifactId>appium_Java_MobileUFABC</artifactId>
+  <artifactId>appium_Politize</artifactId>
   <version>0.0.1-SNAPSHOT</version>
 
   <dependencies>
 
-    <dependency>
-      <groupId>io.appium</groupId>
-      <artifactId>java-client</artifactId>
-      <version>7.3.0</version>
-    </dependency>
-
+	<dependency>
+	    <groupId>io.appium</groupId>
+	    <artifactId>java-client</artifactId>
+	    <version>7.3.0</version>
+	</dependency>
+	
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
@@ -19,24 +19,16 @@
       <scope>test</scope>
     </dependency>
     
-    <dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-java</artifactId>
-    <version>6.9.1</version>
-	</dependency>
-    
-    
-    <dependency>
-    <groupId>io.cucumber</groupId>
-    <artifactId>cucumber-junit</artifactId>
-    <version>6.9.1</version>
-    <scope>test</scope>
+	<dependency>
+	    <groupId>info.cukes</groupId>
+	    <artifactId>cucumber-java</artifactId>
+	    <version>1.2.5</version>
 	</dependency>
     
     <dependency>
-      <groupId>org.easetech</groupId>
-      <artifactId>easytest-core</artifactId>
-      <version>1.2.1</version>
+        <groupId>info.cukes</groupId>
+        <artifactId>cucumber-junit</artifactId>
+        <version>1.2.5</version>
     </dependency>
 
   </dependencies>

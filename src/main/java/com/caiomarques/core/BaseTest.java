@@ -8,16 +8,15 @@ import com.caiomarques.screenObjects.SplashScreen;
 
 public class BaseTest {
 	
-	private BaseScreen base = new BaseScreen();
 	private SplashScreen splash = new SplashScreen();
 	
 	@Before()
 	public void setUp() {
-		base.esperarImplicitamente();
+		splash.esperarImplicitamente();
 		Assert.assertEquals("Politize!", splash.obterTitulo()); 
 	}
 	
-	// Ao finalizar o teste, será deletado aquele motorista para que o proximo teste possa iniciar sem cache
+	// Ao finalizar o teste, serï¿½ deletado aquele motorista para que o proximo teste possa iniciar sem cache
 	@After()
 	public void tearDown() {
 		DriverFactory.killDriver();

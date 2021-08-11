@@ -1,11 +1,10 @@
 # language: pt
-@Splash
 Funcionalidade: Splash
-  	Como: um usu·rio
+  	Como: um usu√°rio
   	Quero: passsar da abertura inicial da tela
   	Para: acessar os principais fluxos das funcionalidades
 
-	  @ct0_Splash
+	  @ct_Splash
 	  Cenario: Validar tela Splash
-		    Dado acesso a tela Splash
-		    Ent„o deve conter o texto "Politize!"
+		Dado acesso a tela Splash
+		Ent√£o deve conter o texto "Politize!"
