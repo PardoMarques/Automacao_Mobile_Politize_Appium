@@ -13,7 +13,7 @@
 1. Clonar o projeto em sua máquina
 2. Ter instalado o Appium
 3. Ter instalado o Android Studio
-4. Preparar um dispositivo móvel (com o emulador) para o projeto
+4. Preparar um dispositivo móvel (no caso, o emulador) para o projeto
 5. Ligar o servidor do Appium
 6. ✨Executar o projeto✨
 <br><br>
