@@ -73,4 +73,4 @@
 
 ```
 
-![Alt Appium_Politize](https://raw.githubusercontent.com/PardoMarques/Appium_Politize/master/ScreenObjectsUML2.png)
+![Alt Appium_Politize](https://raw.githubusercontent.com/PardoMarques/Appium_Politize/master/ScreenObjectsUML2.jpg)
