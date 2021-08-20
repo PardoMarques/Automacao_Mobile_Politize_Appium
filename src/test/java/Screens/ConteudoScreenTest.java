@@ -1,7 +1,5 @@
 package Screens;
 import org.junit.Assert;
-//import org.junit.jupiter.params.ParameterizedTest;
-//import org.junit.jupiter.params.provider.CsvSource;
 import org.junit.Test;
 
 import com.caiomarques.core.BaseTest;
@@ -95,6 +93,7 @@ public class ConteudoScreenTest extends BaseTest{
 			mains.clicarOpcaoMenu("CONTEÚDO");
 			mains.clicarMenu();
 			mains.clicarOpcaoMenu("CONTEÚDO");
+			
 			Assert.assertEquals(conteudo.clicavelCboxSelAutor(), true); 
 			Assert.assertEquals(conteudo.clicavelCboxSelFormato(), true); 
 			Assert.assertEquals(conteudo.clicavelCboxSelNomeCategoria(), true); 
@@ -104,8 +103,36 @@ public class ConteudoScreenTest extends BaseTest{
 		public void validandoFiltrarSomentePorPesquisa()  {
 			mains.clicarMenu();
 			mains.clicarOpcaoMenu("CONTEÚDO");
+			
 			Assert.assertEquals(conteudo.clicavelCboxSelAutor(), true); 
 		}
+		
+//		@Test
+//		public void validandoMutacaoSomentePorAutor()  {
+//			mains.clicarMenu();
+//			mains.clicarOpcaoMenu("CONTEÚDO");
+//			conteudo.comboboxMSelecioneAutor("Adriana Cravo");
+//			
+//			Assert.assertEquals(conteudo.comboboxMSelecioneAutor().getText(), "ADRIANA CRAVO (2)"); 
+//		}
+//		
+//		@Test
+//		public void validandoMutacaoSomentePorFormato()  {
+//			mains.clicarMenu();
+//			mains.clicarOpcaoMenu("CONTEÚDO");
+//			conteudo.comboboxMSelecioneFormato("Podcast");
+//			
+//			Assert.assertEquals(conteudo.comboboxMSelecioneFormato().getText(), "PODCAST (28)"); 
+//		}
+//
+//		@Test
+//		public void validandoMutacaoSomentePorCategoria()  {
+//			mains.clicarMenu();
+//			mains.clicarOpcaoMenu("CONTEÚDO");
+//			conteudo.comboboxMSelecioneCategoria("Atualidades");
+//
+//			Assert.assertEquals(conteudo.comboboxMSelecioneCategoria().getText(), "ATUALIDADES (67)"); 
+//		}
 		
 		@Test
 		public void validandoFiltrarSomentePorAutor()  {
@@ -113,7 +140,9 @@ public class ConteudoScreenTest extends BaseTest{
 			mains.clicarOpcaoMenu("CONTEÚDO");
 			conteudo.comboboxMSelecioneAutor("Adriana Cravo");
 			conteudo.deslizarParaBaixo();
-			Assert.assertEquals(conteudo.clicavelCboxSelAutor(), true); 
+			conteudo.esperar(2);
+			
+			Assert.assertEquals(conteudo.labelMContemResposta().getText(), "Conteúdos Recentes"); 
 		}
 		
 		@Test
@@ -121,7 +150,10 @@ public class ConteudoScreenTest extends BaseTest{
 			mains.clicarMenu();
 			mains.clicarOpcaoMenu("CONTEÚDO");
 			conteudo.comboboxMSelecioneFormato("Podcast");
-			Assert.assertEquals(conteudo.clicavelCboxSelAutor(), true); 
+			conteudo.deslizarParaBaixo();
+			conteudo.esperar(2);
+			
+			Assert.assertEquals(conteudo.labelMContemResposta().getText(), "Conteúdos Recentes"); 
 		}
 		
 		@Test
@@ -129,6 +161,9 @@ public class ConteudoScreenTest extends BaseTest{
 			mains.clicarMenu();
 			mains.clicarOpcaoMenu("CONTEÚDO");
 			conteudo.comboboxMSelecioneCategoria("Atualidades");
-			Assert.assertEquals(conteudo.clicavelCboxSelAutor(), true); 
+			conteudo.deslizarParaBaixo();
+			conteudo.esperar(2);
+			
+			Assert.assertEquals(conteudo.labelMContemResposta().getText(), "Conteúdos Recentes"); 
 		}
 }

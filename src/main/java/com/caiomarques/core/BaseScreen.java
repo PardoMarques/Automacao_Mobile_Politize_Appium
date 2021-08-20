@@ -48,38 +48,35 @@ public abstract class BaseScreen {
 		.doubleClick(mElem)
 		.perform();
 	}
+
+	public void deslizarParaCima() {
+		verticalSwipeByPercentages(0.2, 0.8, 0.5);
+	};
 	
 	public void deslizarParaBaixo() {
-		verticalSwipeByPercentages(20, 80, 50);
-	};
-	
-	public void deslizarParaCima() {
-		verticalSwipeByPercentages(80, 20, 50);
-	};
-	
-	public void deslizarParaDireita() {
-		horizontalSwipeByPercentage(80, 20, 50);
+		verticalSwipeByPercentages(0.8, 0.2, 0.5);
 	};
 	
 	public void deslizarParaEsquerda() {
-		horizontalSwipeByPercentage(20, 80, 50);
+		horizontalSwipeByPercentage(0.2, 0.8, 0.5);
 	};
 	
-	//Tap to an element for 250 milliseconds
+	public void deslizarParaDireita() {
+		horizontalSwipeByPercentage(0.8, 0.2, 0.5);
+	};
+
 	public void tapByElement (MobileElement mElem) {
     	getTouchAction()
             .tap(tapOptions().withElement(element(mElem)))
             .waitAction(waitOptions(ofMillis(250))).perform();
     }
     
-    //Tap by coordinates
 	public void tapByCoordinates (int x,  int y) {
     	getTouchAction()
             .tap(point(x,y))
             .waitAction(waitOptions(ofMillis(250))).perform();
     }
     
-    //Press by element
 	public void pressByElement (MobileElement mElem, long seconds) {
     	getTouchAction()
             .press(element(mElem))
@@ -88,7 +85,6 @@ public abstract class BaseScreen {
             .perform();
     }
     
-    //Press by coordinates
 	public void pressByCoordinates (int x, int y, long seconds) {
     	getTouchAction()
             .press(point(x,y))
@@ -97,7 +93,7 @@ public abstract class BaseScreen {
             .perform();
     }
     
-    //Horizontal Swipe by percentages
+    //Swipes na horizontal por porcentagem
 	public void horizontalSwipeByPercentage (double startPercentage, double endPercentage, double anchorPercentage) {
         Dimension size = getDriver().manage().window().getSize();
         int anchor = (int) (size.height * anchorPercentage);
@@ -110,7 +106,7 @@ public abstract class BaseScreen {
             .release().perform();
     }
     
-    //Vertical Swipe by percentages
+    //Swipes na vertical por porcentagem
 	public void verticalSwipeByPercentages(double startPercentage, double endPercentage, double anchorPercentage) {
         Dimension size = getDriver().manage().window().getSize();
         int anchor = (int) (size.width * anchorPercentage);

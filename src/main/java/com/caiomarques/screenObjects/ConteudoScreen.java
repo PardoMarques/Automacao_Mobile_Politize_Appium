@@ -19,6 +19,14 @@ public class ConteudoScreen extends BaseScreen{
 	By checkboxFormato = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[2]/android.view.View[3]/android.view.View/android.view.View[3]/android.view.View[6]/android.view.View[6]/android.view.View[2]/android.view.View/android.widget.ListView/android.view.View[2]/android.view.View");
 	By checkboxNomeCategoria = By.xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.RelativeLayout/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View[3]/android.view.View[2]/android.view.View[3]/android.view.View/android.view.View[3]/android.view.View[6]/android.view.View[7]/android.view.View[2]/android.view.View/android.widget.ListView/android.view.View[2]/android.view.View");
 	By buttonBUSCAR = By.xpath("//android.widget.Button[@text='BUSCAR']");
+	By labelContemResposta = By.xpath("//android.view.View[@text='Conteúdos Recentes']");
+	
+	
+	// Métodos
+	
+	public MobileElement labelMContemResposta() {
+		return getDriver().findElement(labelContemResposta);
+	}
 	
 	public MobileElement comboboxMSelecioneAutor() {
 		return getDriver().findElements(comboboxSelecioneAutor).get(0);
@@ -34,8 +42,6 @@ public class ConteudoScreen extends BaseScreen{
 	
 	public void comboboxMSelecioneAutor(String autor) {
 		esperar(2);
-		String abcde = comboboxMSelecioneAutor().getText();
-		System.out.println(abcde);
 		comboboxMSelecioneAutor().click();
 		obterElementoQueContemClasseETexto("android.widget.CheckBox",autor).click();
 		comboboxMSelecioneAutor().click();
@@ -47,6 +53,7 @@ public class ConteudoScreen extends BaseScreen{
 		comboboxMSelecioneFormato().click();
 		obterElementoQueContemClasseETexto("android.widget.CheckBox",formato).click();
 		comboboxMSelecioneFormato().click();
+		esperar(1);
 	}
 	
 	public void comboboxMSelecioneCategoria(String categoria) {
@@ -54,6 +61,7 @@ public class ConteudoScreen extends BaseScreen{
 		comboboxMSelecioneCategoria().click();
 		obterElementoQueContemClasseETexto("android.widget.CheckBox",categoria).click();
 		comboboxMSelecioneCategoria().click();
+		esperar(1);
 	}
 	
 	public void inserirPesquisa(String texto) {

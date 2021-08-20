@@ -1,7 +1,5 @@
 package com.caiomarques.core;
 
-import static com.caiomarques.core.DriverFactory.getDriver;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
@@ -43,6 +41,14 @@ public class DriverFactory {
 		}
 		TouchAction touchAction = new TouchAction(driver);
 		return touchAction;
+	}
+	
+	public static TouchActions getTouchActions() {
+		if(driver == null) {
+			createDriver();
+		}
+		TouchActions touchActions = new TouchActions(driver);
+		return touchActions;
 	}
 
 	private static void createDriver(){
