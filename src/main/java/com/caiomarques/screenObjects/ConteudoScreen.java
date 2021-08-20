@@ -32,6 +32,30 @@ public class ConteudoScreen extends BaseScreen{
 		return getDriver().findElements(comboboxSelecioneCategoria).get(2);
 	}
 	
+	public void comboboxMSelecioneAutor(String autor) {
+		esperar(2);
+		String abcde = comboboxMSelecioneAutor().getText();
+		System.out.println(abcde);
+		comboboxMSelecioneAutor().click();
+		obterElementoQueContemClasseETexto("android.widget.CheckBox",autor).click();
+		comboboxMSelecioneAutor().click();
+		esperar(1);
+	}
+	
+	public void comboboxMSelecioneFormato(String formato) {
+		esperar(2);
+		comboboxMSelecioneFormato().click();
+		obterElementoQueContemClasseETexto("android.widget.CheckBox",formato).click();
+		comboboxMSelecioneFormato().click();
+	}
+	
+	public void comboboxMSelecioneCategoria(String categoria) {
+		esperar(2);
+		comboboxMSelecioneCategoria().click();
+		obterElementoQueContemClasseETexto("android.widget.CheckBox",categoria).click();
+		comboboxMSelecioneCategoria().click();
+	}
+	
 	public void inserirPesquisa(String texto) {
 		esperarImplicitamente();
 		getDriver().findElement(inputPesquisa).sendKeys(texto);

@@ -1,12 +1,17 @@
 package com.caiomarques.core;
 
+import static com.caiomarques.core.DriverFactory.getDriver;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.touch.TouchActions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import io.appium.java_client.MobileElement;
+import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
 
 // Design Patterns: Factory/Singleton
@@ -21,6 +26,23 @@ public class DriverFactory {
 			createDriver();
 		}
 		return driver;
+	}
+
+	public static Actions getActions() {
+		if(driver == null) {
+			createDriver();
+		}
+		Actions actions = new Actions(driver);
+		return actions;
+	}
+
+	@SuppressWarnings("rawtypes")
+	public static TouchAction getTouchAction() {
+		if(driver == null) {
+			createDriver();
+		}
+		TouchAction touchAction = new TouchAction(driver);
+		return touchAction;
 	}
 
 	private static void createDriver(){
